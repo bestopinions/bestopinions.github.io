@@ -1,0 +1,4 @@
+baseURL = 'http://bestopinions.xyz/'
+languageCode = 'en-us'
+title = 'BestOpinions'
+theme = 'chalk'
