@@ -1,4 +1,4 @@
-baseURL = 'http://bestopinions.xyz/'
+baseURL = 'https://bestopinions.xyz/'
 languageCode = 'en-us'
 title = 'BestOpinions'
 theme = 'chalk'
