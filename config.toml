@@ -1,4 +1,7 @@
 baseURL = 'https://bestopinions.xyz/'
 languageCode = 'en-us'
-title = 'BestOpinions'
+title = 'Best Opinions'
 theme = 'chalk'
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
