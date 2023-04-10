@@ -27,19 +27,9 @@
     class="center"
   />
   <div class="article-content">{{ .Content }}</div>
-  <script type="text/javascript">
-    amzn_assoc_tracking_id = 'bestopinions-20';
-    amzn_assoc_ad_mode = 'manual';
-    amzn_assoc_ad_type = 'smart';
-    amzn_assoc_marketplace = 'amazon';
-    amzn_assoc_region = 'US';
-    amzn_assoc_design = 'enhanced_links';
-    amzn_assoc_asins = '{{ .Params.code }}';
-    amzn_assoc_placement = 'adunit';
-    amzn_assoc_linkid = 'e6363e30107828bce02215d44cb269f7';
-  </script>
-  <script src="https://z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-
+  <!-- AMAZON -->
+  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=3baddbf7-c619-4813-8988-3dc776b42eb8"></script>
+  <!-- END AMAZON -->
   <div class="article-share">
     {{ $page_title := truncate 110 .Title }} {{ $by_text := "" }} {{ with site.Params.twitter }}{{
     $by_text = printf " by @%s" . }}{{ end }} {{ $twitter_share_text := printf "%s%s" $page_title
@@ -69,15 +59,5 @@
       </svg>
     </a>
   </div>
-
-  {{ with site.Params.discus_identifier }}
-  <div id="disqus_thread" class="article-comments"></div>
-  <script
-    src="https://{{ site.Params.discus_identifier }}.disqus.com/embed.js"
-    async
-    defer
-  ></script>
-  <noscript>Please enable JavaScript to view the comments.</noscript>
-  {{ end }}
 </article>
 {{ end }}
