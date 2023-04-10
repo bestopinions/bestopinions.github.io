@@ -1,19 +1,45 @@
 {{ define "main" }}
 <article class="article {{ with site.Params.chalk.scrollappear_enabled }}scrollappear{{ end }}">
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      margin-bottom: 40px;
+    }
+  </style>
+
+  <a
+    href="https://www.amazon.com/dp/{{ .Params.code }}?_encoding=UTF8&pd_rd_w=3URZi&content-id=amzn1.sym.a1a3dfab-606d-4be0-8433-474635d71669&pf_rd_p=a1a3dfab-606d-4be0-8433-474635d71669&pf_rd_r=5B3ZQWPJ5T4XBG8HFS8R&pd_rd_wg=pBgnk&pd_rd_r=3e2b7b39-b519-461d-aed5-1ec7b5be0921&linkCode=li3&tag=bestopinions-20&linkId=4d848123585dc2855a380d0bed217d33&language=en_US&ref_=as_li_ss_il"
+    target="_blank"
+    ><img
+      border="0"
+      class="center"
+      src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN={{ .Params.code }}&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=bestopinions-20&language=en_US" /></a
+  ><img
+    rel="prefetch"
+    src="https://ir-na.amazon-adsystem.com/e/ir?t=bestopinions-20&language=en_US&l=li3&o=1&a={{ .Params.code }}"
+    width="1"
+    height="1"
+    border="0"
+    alt=""
+    class="center"
+  />
   <div class="article-content">{{ .Content }}</div>
   <script type="text/javascript">
-    const code = '{{ .Params.code }}';
     amzn_assoc_tracking_id = 'bestopinions-20';
     amzn_assoc_ad_mode = 'manual';
     amzn_assoc_ad_type = 'smart';
     amzn_assoc_marketplace = 'amazon';
     amzn_assoc_region = 'US';
     amzn_assoc_design = 'enhanced_links';
-    amzn_assoc_asins = code;
+    amzn_assoc_asins = '{{ .Params.code }}';
     amzn_assoc_placement = 'adunit';
-    amzn_assoc_linkid = 'c33c25ebedd207c123a284f01e1400ca';
+    amzn_assoc_linkid = 'e6363e30107828bce02215d44cb269f7';
   </script>
-  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+  <script src="https://z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+
   <div class="article-share">
     {{ $page_title := truncate 110 .Title }} {{ $by_text := "" }} {{ with site.Params.twitter }}{{
     $by_text = printf " by @%s" . }}{{ end }} {{ $twitter_share_text := printf "%s%s" $page_title
